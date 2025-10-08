@@ -4,3 +4,4 @@ apscheduler
 mysql-connector-python
 sqlalchemy
 python-dotenv
+python-telegram-bot[job-queue]==20.7
