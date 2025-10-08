@@ -57,8 +57,9 @@ async def send_goal_reminder(context):
     chat_id = job.data['chat_id']
     goal = job.data['goal']
     today = datetime.date.today().isoformat()
-    
+    print(f"[Reminder] Checking goal reminder for chat_id={chat_id}, goal_id={goal['id']}, today={today}, last_checkin={goal.get('last_checkin')}, status={goal.get('status')}")
     if goal.get('last_checkin') != today and goal.get('status') == 'active':
+        print(f"[Reminder] Sending GOAL reminder for chat_id={chat_id}, goal_id={goal['id']}")
         await context.bot.send_message(
             chat_id=chat_id,
             text=f"🎯 **Goal Reminder**\n\n"
@@ -69,6 +70,8 @@ async def send_goal_reminder(context):
                  f"Mark it done: /goaldone {goal['id']}",
             parse_mode='Markdown'
         )
+    else:
+        print(f"[Reminder] No GOAL reminder sent for chat_id={chat_id}, goal_id={goal['id']} (already checked in or not active)")
 
 
 async def send_habit_reminder(context):
@@ -76,8 +79,9 @@ async def send_habit_reminder(context):
     chat_id = job.data['chat_id']
     habit = job.data['habit']
     today = datetime.date.today().isoformat()
-    
+    print(f"[Reminder] Checking habit reminder for chat_id={chat_id}, habit_id={habit['id']}, today={today}, last_completed={habit.get('last_completed')}, status={habit.get('status')}")
     if habit.get('last_completed') != today and habit.get('status') == 'active':
+        print(f"[Reminder] Sending HABIT reminder for chat_id={chat_id}, habit_id={habit['id']}")
         days_left = 21 - habit.get('streak', 0)
         await context.bot.send_message(
             chat_id=chat_id,
@@ -88,6 +92,8 @@ async def send_habit_reminder(context):
                  f"Complete it: /habitdone {habit['id']}",
             parse_mode='Markdown'
         )
+    else:
+        print(f"[Reminder] No HABIT reminder sent for chat_id={chat_id}, habit_id={habit['id']} (already completed or not active)")
 
 
 # Schedule reminders at user-specified times
