@@ -3,3 +3,4 @@ openai
 apscheduler
 mysql-connector-python
 sqlalchemy
+python-dotenv
