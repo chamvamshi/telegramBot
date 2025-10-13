@@ -10,12 +10,22 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+#DB_CONFIG = {
+#    'host': os.getenv('DB_HOST', 'localhost'),
+ #   'user': os.getenv('DB_USER', 'root'),
+#    'password': os.getenv('DB_PASSWORD', ''),
+ #   'port': int(os.getenv('DB_PORT', 3306))
+#}
+
 DB_CONFIG = {
-    'host': os.getenv('DB_HOST', 'localhost'),
-    'user': os.getenv('DB_USER', 'root'),
-    'password': os.getenv('DB_PASSWORD', ''),
-    'port': int(os.getenv('DB_PORT', 3306))
+    'host': os.getenv('MYSQLHOST', 'localhost'),
+    'user': os.getenv('MYSQLUSER', 'root'),
+    'password': os.getenv('MYSQLPASSWORD', ''),
+    'port': int(os.getenv('MYSQLPORT', 3306))
 }
+
+DB_NAME = os.getenv('MYSQLDATABASE', 'railway')
+
 
 DB_NAME = os.getenv('DB_NAME', 'soulfriend_bot')
 
