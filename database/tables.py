@@ -16,6 +16,7 @@ load_dotenv()
 #    'password': os.getenv('DB_PASSWORD', ''),
  #   'port': int(os.getenv('DB_PORT', 3306))
 #}
+#DB_NAME = os.getenv('DB_NAME', 'soulfriend_bot')
 
 DB_CONFIG = {
     'host': os.getenv('MYSQLHOST', 'localhost'),
@@ -27,7 +28,7 @@ DB_CONFIG = {
 DB_NAME = os.getenv('MYSQLDATABASE', 'railway')
 
 
-DB_NAME = os.getenv('DB_NAME', 'soulfriend_bot')
+
 
 def init_all_tables():
     """Create database and all tables"""
