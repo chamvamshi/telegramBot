@@ -5,3 +5,8 @@ mysql-connector-python
 sqlalchemy
 python-dotenv
 python-telegram-bot[job-queue]==20.7
+pymysql
+matplotlib
+pillow
+numpy
+seaborn

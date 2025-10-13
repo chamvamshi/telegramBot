@@ -1,32 +1,41 @@
-# Python cache files
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Virtual environment
+*.py[cod]
+*$py.class
+*.so
+.Python
 venv/
 env/
-.venv/
+ENV/
 
-# Environment variables
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment
 .env
-*.env
-*.env.*
+.env.local
 
-
-# IDE / Editor files
+# IDE
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
+*.swp
+*.swo
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
 
 # Logs
 *.log
 
-# Optional: compiled extensions
-*.so
+# Charts
+*.png
+*.jpg
+*.jpeg
+
+# Temp files
+*.tmp
+*.bak
+~*
