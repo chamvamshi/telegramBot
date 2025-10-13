@@ -19,13 +19,14 @@ load_dotenv()
 #DB_NAME = os.getenv('DB_NAME', 'soulfriend_bot')
 
 DB_CONFIG = {
-    'host': os.getenv('MYSQLHOST', 'localhost'),
-    'user': os.getenv('MYSQLUSER', 'root'),
-    'password': os.getenv('MYSQLPASSWORD', ''),
+    'host': os.getenv('MYSQLHOST'),
+    'user': os.getenv('MYSQLUSER'),
+    'password': os.getenv('MYSQLPASSWORD'),
     'port': int(os.getenv('MYSQLPORT', 3306))
 }
 
 DB_NAME = os.getenv('MYSQLDATABASE', 'railway')
+
 
 
 
