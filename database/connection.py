@@ -26,3 +26,18 @@ def get_db_connection():
 def get_connection():
     """Alias for compatibility"""
     return get_db_connection()
+
+def test_connection():
+    """Test database connection"""
+    try:
+        conn = get_db_connection()
+        if conn:
+            print("✅ Database connection successful!")
+            conn.close()
+            return True
+        else:
+            print("❌ Connection failed!")
+            return False
+    except Exception as e:
+        print(f"❌ Connection test error: {e}")
+        return False
