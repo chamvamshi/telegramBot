@@ -25,7 +25,7 @@ DB_CONFIG = {
     'port': int(os.getenv('MYSQLPORT', 3306))
 }
 
-DB_NAME = os.getenv('MYSQLDATABASE', 'railway')
+DB_NAME = os.getenv('MYSQL_DATABASE', 'railway')
 
 
 
